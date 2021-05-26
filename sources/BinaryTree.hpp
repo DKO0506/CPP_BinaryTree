@@ -39,7 +39,7 @@ namespace ariel {
 
     protected:
         Node* root;
-        std::map<T, Node*> vertices;
+        std::map<T, Node*> vertex;
 
     public:
        
