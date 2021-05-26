@@ -7,7 +7,7 @@
 namespace ariel {
 
     template<typename T> class BinaryTree {
-        // using iterator = typename std::list<T>::iterator;
+       
 
         struct Node {
             T value;
@@ -39,40 +39,29 @@ namespace ariel {
 
     protected:
         Node* root;
-        std::map<T, Node*> vertex;
+        std::map<T, Node*> vertices;
 
     public:
-        /**
-         * add_root - add the head of the tree
-        */
+       
+        
         BinaryTree& add_root(T root){return *this;}
-        /**
-         * add_right - add the right child to some node in the tree
-        */
+        
+        
         BinaryTree& add_right(T node, T rChild){return *this;}
-        /**
-         * add_left - add the left child to some node in the tree
-        */
+        
         BinaryTree& add_left(T node, T lChild){return *this;}
-        /**
-         * postorder
-        */
+        
         tree_iterator begin_postorder(){return tree_iterator{root};}
         tree_iterator end_postorder(){return nullptr;}
-        /**
-         * preorder
-        */
+        
         tree_iterator begin_preorder(){return tree_iterator{root};}
         tree_iterator end_preorder(){return nullptr;}
-        /**
-         * inorder
-        */
+        
+       
         tree_iterator begin_inorder(){return tree_iterator{root};}
         tree_iterator end_inorder(){return nullptr;}
 
-        /**
-         * iter normal
-        */
+  
         tree_iterator begin(){return tree_iterator{root};}
         tree_iterator end(){return nullptr;}
 
